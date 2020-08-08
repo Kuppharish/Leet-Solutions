@@ -6,7 +6,7 @@
         for(char c:searchWord){
             cur+=c;
             vector<string> suggested;
-            it = lower_bound(it,products.end(),cur);
+            it = lower_bound(it,products.end(),cur); //finding the index of first element of vector that is less than cur
             for(int j=0;j<3&&it+j!=products.end();++j){
                 string& s = *(it+j);
                 if(s.find(cur)) break; //checking if first subset of cur is in 0 index
